@@ -1,0 +1,351 @@
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --De-saturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+}
+
+
+/* body------- */
+body {
+    background-color: var(--Light-Grayish-Blue);
+}
+
+
+/* *Container */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    padding: 0 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/** content Section */
+
+.content-left {
+    clear: left;
+    width: 451px;
+    height: 282px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+    background: white;
+    margin-left: -65px;
+}
+
+.content h1 {
+    font-size: 20px;
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+    padding: 0 50px;
+    margin-top: 30px;
+}
+
+.content p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--De-saturated-Dark-Blue);
+    padding: 0 50px;
+    margin-top: 15px;
+}
+
+
+/* * Creator Section */
+.creator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    padding: 0 50px;
+    margin-top: 30px;
+}
+
+.creator-left {
+    display: flex;
+}
+
+
+/* *Creator information */
+
+.avatar img {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.creator-info h2 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+    margin-bottom: 2px;
+}
+
+.creator-info h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+}
+
+
+/* *Share Section */
+
+.share-2 {
+    display: none;
+}
+
+.share-btn {
+    border-radius: 50%;
+    background: var(--Light-Grayish-Blue);
+    padding: 5.3px 8px;
+    margin-top: -5.3px;
+}
+
+.share-btn:hover {
+    background: var(--Very-Dark-Grayish-Blue);
+    cursor: pointer;
+    transition: ease-out 0.4s;
+}
+
+.share-btn img:hover {
+    filter: brightness(0) invert(1);
+}
+
+/* * Share Pop-up */
+.share-option {
+    background: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    display: none;
+    margin-left: 260px;
+    margin-top: -127px;
+    position: absolute;
+}
+
+.share-option span {
+    border-top: 13px solid var(--Very-Dark-Grayish-Blue);
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    z-index: -1;
+    margin-top: 60px;
+}
+
+
+/* *Share Pop-up text */
+.share-option h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--Grayish-Blue);
+    margin-left: 35px;
+}
+
+
+/* *Share Social Icons */
+.share-option .socials img {
+    padding: 0 5px;
+}
+
+.share-option .socials {
+    margin-right: 32px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* *Drawer Image */
+.drawer img {
+    width: 353px;
+    float: left;
+    margin-left: 45px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+/* *Attribution Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 650px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+/* *Responsiveness */
+
+@media screen and (max-width:375px) {
+
+    .container {
+        width: 90%;
+        /* border: 1px solid red; */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+
+    .content-left {
+        width: 100%;
+        height: 315px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content h1 {
+        font-size: 16px;
+        color: var(--Very-Dark-Grayish-Blue);
+        font-weight: 700;
+        padding: 0 35px;
+        margin-top: 38px;
+        margin-left: 3px;
+    }
+
+    .content p {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--De-saturated-Dark-Blue);
+        padding: 0 43px;
+        margin-top: 15px;
+        line-height: 20px;
+        margin-left: -5px;
+    }
+
+
+    /* * Creator Section */
+    .creator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        padding: 0 32px;
+        margin-top: 35px;
+        margin-left: 5px;
+    }
+
+    .creator-left {
+        display: flex;
+    }
+
+
+    /* *Creator information */
+
+
+    /* * Share Pop-up */
+
+    .share-btn {
+        border-radius: 50%;
+        background: var(--Light-Grayish-Blue);
+        padding: 5.3px 9px;
+        margin-top: -5.3px;
+        z-index: 1;
+    }
+
+    .share-btn:hover {
+        background-color: var(--De-saturated-Dark-Blue);
+    }
+
+
+    .share-option {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 72px;
+        margin-left: 0;
+        margin-top: -57px;
+        position: fixed;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        display: none;
+    }
+
+
+    .share-option span {
+        display: none;
+    }
+
+
+    /* *Share Pop-up text */
+    .share-option h4 {
+        margin-left: 70px;
+        padding-right: 10px;
+    }
+
+
+    /* *Share Social Icons */
+
+
+    .share-option .socials img {
+        padding: 0 9px;
+    }
+
+    .share-option .socials {
+        margin-right: 150px;
+    }
+
+
+    /* *Drawer Image */
+
+
+    .drawer {
+        overflow: hidden;
+        max-height: 200px;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+
+    .drawer img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        margin-top: -22px;
+    }
+
+
+
+    /* *Attribution Footer */
+
+    .attribution {
+        /* padding-top: 220px; */
+        padding-top: 120px;
+    }
+
+}
